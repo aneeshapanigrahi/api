@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const formSchema = new mongoose.Schema({
+    userId: {
+        type: String,
+        require: true
+    },
     item: {//Men,Women
         type: String,
         required: true
@@ -18,11 +22,11 @@ const formSchema = new mongoose.Schema({
         default: false
     },
     haveMaterial: {
-        type: String,
+        type: Boolean,
         default: false
     },
     contact: {
-        type: String
+        type: Number
     },
     emailId: {
         type: String
@@ -40,15 +44,11 @@ const formSchema = new mongoose.Schema({
         type: String
     },
     pincode: {
-        type: String
+        type: Number
     },
     quantity: {
         type: String
     }
-    // ,postedBy: {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: 'User'
-    // }
 }, {
     timestamps: true
 });

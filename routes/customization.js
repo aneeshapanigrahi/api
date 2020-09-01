@@ -2,7 +2,6 @@ const router = require("express").Router();
 const Customizations = require('../models/customize');
 const bodyParser = require('body-parser');
 router.use(bodyParser.json());
-const Tag = require('../models/customize')
 
 router.route('/') //Done
     .get((req, res, next) => {
